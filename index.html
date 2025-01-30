@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apontamento de Telhas</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Apontamento de Telhas <a href="#"><i class="fas fa-home"></i></a></h2>
+            <div class="actions">
+                <button> <i class="fas fa-save"></i> Salvar</button>
+            </div>
+        </div>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="ops"> <i class="fas fa-list"></i> Lista de Ordens</button>
+            <button class="tab-button" data-tab="apontamento"> <i class="fas fa-stream"></i> Apontamento</button>
+            <button class="tab-button" data-tab="materia-prima"> <i class="fas fa-cubes"></i> Matéria Prima</button>
+        </div>
+         <div id="ops" class="tab-content active">
+            <div class="filter-container">
+                <input type="text" placeholder="Filtrar">
+                <button> <i class="fas fa-search"></i> </button>
+            </div>
+         <table>
+            <thead>
+                <tr>
+                    <th>N° OP</th>
+                    <th>NR</th>
+                    <th>Item</th>
+                    <th>Comprimento</th>
+                    <th>Largura</th>
+                    <th>Qtd a Produzir</th>
+                    <th>Qtd Produzida</th>
+                     <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="order-list-body">
+                 <tr>
+                        <td>21155</td>
+                         <td>1</td>
+                        <td>BOB CALHEIRA GALV. 0.43 X 1200 MM - 25 MT</td>
+                        <td>25 MT</td>
+                       <td>1200</td>
+                         <td>10</td>
+                         <td>0</td>
+                        <td><button class="select-order-btn" data-order='{"op":"21155", "nr": "1","item":"BOB CALHEIRA GALV. 0.43 X 1200 MM - 25 MT","largura":"0.43","comprimento":"1200","qtd_produzir":"10","qtd_produzida":"0"}'>Selecionar</button></td>
+                 </tr>
+                  <tr class="gray-row">
+                        <td>21156</td>
+                         <td>2</td>
+                         <td>BOB CALHEIRA GALV. 0.43 X 600 MM - 50 MT</td>
+                        <td>50 MT</td>
+                         <td>600</td>
+                        <td>20</td>
+                          <td>0</td>
+                          <td><button class="select-order-btn" data-order='{"op":"21156", "nr": "2","item":"BOB CALHEIRA GALV. 0.43 X 600 MM - 50 MT","largura":"0.43","comprimento":"600","qtd_produzir":"20","qtd_produzida":"0"}'>Selecionar</button></td>
+                   </tr>
+                 <tr>
+                        <td>21157</td>
+                         <td>3</td>
+                         <td>BOB CALHEIRA GALV. 0.43 X 1000 MM - 25 MT</td>
+                        <td>25 MT</td>
+                         <td>1000</td>
+                         <td>5</td>
+                          <td>0</td>
+                          <td><button class="select-order-btn" data-order='{"op":"21157", "nr": "3","item":"BOB CALHEIRA GALV. 0.43 X 1000 MM - 25 MT","largura":"0.43","comprimento":"1000","qtd_produzir":"5","qtd_produzida":"0"}'>Selecionar</button></td>
+                 </tr>
+                   <tr>
+                        <td>21158</td>
+                         <td>3</td>
+                         <td>BOB CALHEIRA GALV. 0.43 X 200 MM - 25 MT</td>
+                         <td>25 MT</td>
+                         <td>200</td>
+                         <td>5</td>
+                         <td>0</td>
+                       <td><button class="select-order-btn" data-order='{"op":"21158", "nr": "4","item":"BOB CALHEIRA GALV. 0.43 X 200 MM - 25 MT","largura":"0.43","comprimento":"200","qtd_produzir":"5","qtd_produzida":"0"}'>Selecionar</button></td>
+                    </tr>
+                    <tr class="gray-row">
+                        <td>21158</td>
+                        <td>4</td>
+                        <td>BOB CALHEIRA GALV. 0.43 X 200 MM - 25 MT</td>
+                        <td>25 MT</td>
+                        <td>200</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td><button class="select-order-btn">Selecionar</button></td>
+                    </tr>
+                    
+                 </tr>
+                    <tr>
+                        <td>21161</td>
+                         <td>5</td>
+                         <td>BOB CALHEIRA GALV. 0.43 X 400 MM - 25 MT</td>
+                         <td>25 MT</td>
+                         <td>400</td>
+                        <td>4</td>
+                         <td>0</td>
+                          <td><button class="select-order-btn" data-order='{"op":"21161", "nr": "7","item":"BOB CALHEIRA GALV. 0.43 X 400 MM - 25 MT","largura":"0.43","comprimento":"400","qtd_produzir":"4","qtd_produzida":"0"}'>Selecionar</button></td>
+                 </tr>
+            </tbody>
+        </table>
+              <div class="pagination">
+                <button> <i class="fas fa-angle-double-left"></i> </button>
+                <button> <i class="fas fa-angle-left"></i> </button>
+                <span>1 / 1</span>
+                <button> <i class="fas fa-angle-right"></i> </button>
+                <button> <i class="fas fa-angle-double-right"></i> </button>
+        </div>
+        </div>
+           <div id="apontamento" class="tab-content">
+            <form id="apontamento-form">
+                <div class="form-group">
+                    <label for="op">N° OP:</label>
+                    <input type="text" id="op" name="op" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="nr">NR:</label>
+                    <input type="text" id="nr" name="nr" readonly>
+                </div>
+                  <div class="form-group">
+                    <label for="item">Item:</label>
+                    <input type="text" id="item" name="item" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="largura">Largura:</label>
+                    <input type="text" id="largura" name="largura" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="comprimento">Comprimento:</label>
+                    <input type="text" id="comprimento" name="comprimento" readonly>
+                </div>
+                   <div class="form-group">
+                    <label for="qtd_produzir">Qtd a Produzir:</label>
+                    <input type="text" id="qtd_produzir" name="qtd_produzir" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="qtd_produzida">Qtd Produzida:</label>
+                    <input type="text" id="qtd_produzida" name="qtd_produzida" readonly>
+                </div>
+                 <div class="form-group">
+                    <label for="bobinas">Quantidade de Bobinas Fabricadas:</label>
+                    <input type="number" id="bobinas" name="bobinas" required>
+                </div>
+                <button type="submit"> <i class="fas fa-save"></i> Salvar Apontamento</button>
+            </form>
+        </div>
+        <div id="materia-prima" class="tab-content">
+             <form id="materia-prima-form">
+                <div class="form-group">
+                    <label for="lote">Lote:</label>
+                    <input type="text" id="lote" name="lote" value="abc" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" name="peso" value="7000" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="peso_restante">Peso Restante:</label>
+                    <input type="number" id="peso_restante" name="peso_restante" required>
+                </div>
+                 <button type="submit"> <i class="fas fa-check"></i> Encerrar Lote</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
