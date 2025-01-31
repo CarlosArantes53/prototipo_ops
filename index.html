@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apontamento de Telhas</title>
+    <title>Apontamento de Bobina calheira</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h2>Apontamento de Telhas <a href="#"><i class="fas fa-home"></i></a></h2>
+            <h2>Apontamento de Bobina calheira<a href="#"><i class="fas fa-home"></i></a></h2>
             <div class="actions">
                 <button> <i class="fas fa-save"></i> Salvar</button>
             </div>
@@ -21,10 +21,6 @@
             <button class="tab-button" data-tab="materia-prima"> <i class="fas fa-cubes"></i> Matéria Prima</button>
         </div>
          <div id="ops" class="tab-content active">
-            <div class="filter-container">
-                <input type="text" placeholder="Filtrar">
-                <button> <i class="fas fa-search"></i> </button>
-            </div>
          <table>
             <thead>
                 <tr>
@@ -155,12 +151,12 @@
                     <input type="text" id="lote" name="lote" value="abc" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="peso">Peso:</label>
+                    <label for="peso">Peso restante:</label>
                     <input type="number" id="peso" name="peso" value="7000" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="peso_restante">Peso Restante:</label>
-                    <input type="number" id="peso_restante" name="peso_restante" required>
+                    <label for="metro_restante">Metragem Restante:</label>
+                    <input type="number" id="metro_restante" name="metro_restante" required>
                 </div>
                  <button type="submit"> <i class="fas fa-check"></i> Encerrar Lote</button>
             </form>

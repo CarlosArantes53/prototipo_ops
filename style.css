@@ -211,6 +211,6 @@ tr:hover{
 #materia-prima-form button:hover{
       background-color: #218838;
 }
-.gray-row{
-  background-color: #7e7e7e;
-}
+.gray-row {
+    background-color: #7e7e7e !important;
+  }

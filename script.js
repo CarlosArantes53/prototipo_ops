@@ -20,8 +20,6 @@ tabButtons.forEach(button => {
 selectOrderButtons.forEach(button => {
     button.addEventListener('click', () => {
          const orderData = JSON.parse(button.getAttribute('data-order'));
-
-        // Populate the form with selected order data
         apontamentoForm.op.value = orderData.op;
         apontamentoForm.nr.value = orderData.nr;
         apontamentoForm.item.value = orderData.item;
@@ -37,7 +35,6 @@ selectOrderButtons.forEach(button => {
 
 document.querySelector('.tab-button[data-tab="ops"]').click();
 
-//handle the apontamento submit
  apontamentoForm.addEventListener('submit', function(event) {
         event.preventDefault();
       const formData = new FormData(apontamentoForm);
@@ -46,7 +43,7 @@ document.querySelector('.tab-button[data-tab="ops"]').click();
       alert("Apontamento Salvo!");
 
 });
-//handle the materia prima submit
+
 materiaPrimaForm.addEventListener('submit', function(event) {
        event.preventDefault();
     const formData = new FormData(materiaPrimaForm);
